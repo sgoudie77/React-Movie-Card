@@ -1,0 +1,99 @@
+/* Global Styles Start Here */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Global Styles end Here */
+
+/* Movie Card General Styles Start Here */
+.card {
+    position: relative;
+    width: 240px;
+    height: 356px;
+    height: auto;
+    border: none;
+    box-shadow: 10px 30px 30px rgba(0,0,0,0.9);
+    overflow: hidden;
+}
+
+.card .content {
+    display: flex;
+    align-items: center;
+}
+
+.card .content .imgBx {
+    position: relative;
+    width: 240px;
+    height: 356px;
+    overflow: hidden;
+}
+
+.card .content .imgBx img {
+    width: 240px;
+    height: 356px;
+}
+/* Movie Card General Styles End Here */
+
+/* Movie Details Section Styles Start Here */
+.details {
+    position: relative;
+    display:inline-block;
+    justify-content: center;
+    background: rgba(0,0,0,0.8);
+    width: 240px;
+}
+
+.details ion-icon {
+    font-size: 1.1em;
+    color: red;
+    padding-right: .5em;
+    padding-left: .9em;
+}
+
+.details li {
+    position: relative;
+    display: flex;
+    color: #fff;
+    text-align: start;
+    list-style: none;
+    margin: 12px 0;
+}
+/* Movie Details Section Styles End Here */
+
+/* Details Toggle Styles Start Here */
+.toggle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    border: none;
+}
+
+.toggle ion-icon {
+    color: red;
+    font-size: 1.4em;
+    transition: transform ease-in-out .25s;
+}
+/* Details Toggle Styles End Here */
