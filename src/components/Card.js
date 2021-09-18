@@ -19,7 +19,7 @@ class Card extends Component {
   render() {
     // remove height variable
     const { height } = this.state;
-//change all height values to isVisable
+//change all height values to isVisible or !isVisible
     return (
         <div className="card">
             <div className="content">
