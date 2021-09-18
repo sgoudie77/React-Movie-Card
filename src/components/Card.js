@@ -7,6 +7,7 @@ class Card extends Component {
     height: 0,
   };
 
+  //change height values and toggle
   toggle = () => {
     const { height } = this.state;
 
@@ -16,8 +17,9 @@ class Card extends Component {
   };
 
   render() {
+    // remove height variable
     const { height } = this.state;
-
+//change all height values to isVisable
     return (
         <div className="card">
             <div className="content">
@@ -25,11 +27,14 @@ class Card extends Component {
                     <img src={cover} alt="movie cover" />
                 </div>
             </div>
-
+            
             <button className="toggle" aria-expanded={ height !== 0 } onClick={ this.toggle }>
                 { height === 0 ? <ion-icon name="chevron-down-outline"></ion-icon> : <ion-icon name="chevron-up-outline"></ion-icon> }
             </button>
+            {
+
               <MovieDetails height={height} Director={'Todd Phillips'} Actor={'Joaquin Phoenix'} Length={'2h 2min'} Rating={'4/5'} />  
+            }
         </div>
     );
   }
