@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AnimateHeight from 'react-animate-height';
-import cover from '../img/cover.jpg'
+import cover from '../img/cover.jpg';
+import MovieDetails from './MovieDetails';
 
 class Card extends Component {
   state = {
@@ -29,15 +29,7 @@ class Card extends Component {
             <button className="toggle" aria-expanded={ height !== 0 } onClick={ this.toggle }>
                 { height === 0 ? <ion-icon name="chevron-down-outline"></ion-icon> : <ion-icon name="chevron-up-outline"></ion-icon> }
             </button>
-
-            <AnimateHeight duration={ 500 } height={ height }>
-                <div className="details">
-                    <li><ion-icon name="videocam-outline"></ion-icon> Director: Todd Phillips</li>
-                    <li><ion-icon name="person-circle-outline"></ion-icon> Actor: Joaquin Phoenix</li>
-                    <li><ion-icon name="hourglass-outline"></ion-icon> Length: 2h 2min</li>
-                    <li><ion-icon name="star-outline"></ion-icon> Rating: 4/5</li>
-                </div>
-            </AnimateHeight>
+              <MovieDetails height={height} Director={'Todd Phillips'} Actor={'Joaquin Phoenix'} Length={'2h 2min'} Rating={'4/5'} />  
         </div>
     );
   }
